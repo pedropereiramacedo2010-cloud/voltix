@@ -1,0 +1,515 @@
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #05070d;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar {
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 8%;
+
+    background: rgba(5, 7, 13, 0.88);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(15px);
+}
+
+.logo {
+    color: #ffffff;
+    text-decoration: none;
+
+    font-size: 25px;
+    font-weight: 900;
+
+    letter-spacing: 3px;
+}
+
+.logo::first-letter {
+    color: #00aaff;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+
+    list-style: none;
+}
+
+.menu a {
+    color: #b8c1d1;
+    text-decoration: none;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #00aaff;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 140px 10% 80px;
+
+    background:
+        radial-gradient(
+            circle at 80% 40%,
+            rgba(0, 170, 255, 0.18),
+            transparent 30%
+        );
+}
+
+.hero-text {
+    max-width: 700px;
+}
+
+.tag {
+    color: #00aaff;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(50px, 7vw, 90px);
+
+    line-height: 0.95;
+
+    letter-spacing: -4px;
+
+    margin-bottom: 30px;
+}
+
+.hero h1 span {
+    color: #00aaff;
+}
+
+.hero-description {
+    color: #8994a7;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    max-width: 600px;
+
+    margin-bottom: 40px;
+}
+
+
+/* =========================
+   BOTÕES
+========================= */
+
+.button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px 25px;
+
+    border-radius: 8px;
+
+    background: #00aaff;
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    text-decoration: none;
+
+    border: 1px solid #00aaff;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.button:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 30px rgba(0, 170, 255, 0.25);
+}
+
+
+/* =========================
+   ÍCONE
+========================= */
+
+.hero-icon {
+    width: 270px;
+    height: 270px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 130px;
+
+    background: rgba(0, 170, 255, 0.08);
+
+    border: 1px solid rgba(0, 170, 255, 0.3);
+
+    box-shadow:
+        0 0 80px rgba(0, 170, 255, 0.12);
+
+    animation: flutuar 4s ease-in-out infinite;
+}
+
+@keyframes flutuar {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   SEÇÕES
+========================= */
+
+.section {
+    padding: 110px 10%;
+}
+
+.section h2 {
+    font-size: 48px;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 50px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.card {
+    padding: 35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0d121c,
+            #080c14
+        );
+
+    border: 1px solid #1b2432;
+
+    border-radius: 18px;
+
+    transition: 0.35s;
+
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+
+    border-color:
+        rgba(0, 170, 255, 0.5);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background:
+        rgba(0, 170, 255, 0.10);
+
+    font-size: 30px;
+
+    margin-bottom: 25px;
+}
+
+.card h3 {
+    font-size: 23px;
+
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #8994a7;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   WHATSAPP
+========================= */
+
+.whatsapp {
+    width: 100%;
+
+    background: #19c463;
+
+    border-color: #19c463;
+}
+
+.whatsapp:hover {
+    background: #12a653;
+
+    border-color: #12a653;
+
+    box-shadow:
+        0 10px 30px
+        rgba(25, 196, 99, 0.20);
+}
+
+
+/* =========================
+   PREÇOS
+========================= */
+
+.precos {
+    background: #080c14;
+}
+
+.price {
+    text-align: center;
+}
+
+.price strong {
+    display: block;
+
+    font-size: 38px;
+
+    color: #00aaff;
+
+    margin: 20px 0;
+}
+
+.price p {
+    margin-bottom: 30px;
+}
+
+.destaque {
+    border-color: #00aaff;
+
+    transform: translateY(-5px);
+}
+
+.badge {
+    display: inline-block;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    background: rgba(0, 170, 255, 0.12);
+
+    color: #00aaff;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   SOBRE
+========================= */
+
+.about {
+    background: #05070d;
+}
+
+.about-content {
+    max-width: 750px;
+}
+
+.about p {
+    color: #8994a7;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+
+    font-size: 17px;
+}
+
+
+/* =========================
+   CONTATO
+========================= */
+
+.contact {
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(0, 170, 255, 0.10),
+            transparent 45%
+        );
+}
+
+.contact h2 {
+    margin-bottom: 15px;
+}
+
+.contact p {
+    color: #8994a7;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 35px;
+
+    text-align: center;
+
+    color: #596579;
+
+    border-top: 1px solid #151d29;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 900px) {
+
+    .menu {
+        display: none;
+    }
+
+    .hero {
+        text-align: center;
+
+        justify-content: center;
+    }
+
+    .hero-icon {
+        display: none;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .section h2 {
+        font-size: 38px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .section {
+        padding: 80px 7%;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .card {
+        padding: 28px;
+    }
+
+}
+```
